@@ -5,11 +5,12 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      carouselItems: [],
+      selecteImageIndex: 0,
     }
   }
   componentDidMount(){
-
+    this.setState({ carouselItems: carouselData})
   }
 
   leftClick = () => {
