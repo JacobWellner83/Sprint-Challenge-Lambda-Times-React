@@ -8,6 +8,7 @@ export default class Carousel extends Component {
       carouselItems: [],
       selecteImageIndex: 0,
     }
+    this.selectedImage = this.selectedImage.bind(this)
   }
   componentDidMount(){
     this.setState({ carouselItems: carouselData})
@@ -37,7 +38,7 @@ export default class Carousel extends Component {
     const { carouselItems, selectedImageIndex } = this.state
     return <img
       src={carouselItems[selectedImageIndex]}
-      alt="Description not available"
+      alt="None Available"
       style={{display: 'block'}} />
   }
   
